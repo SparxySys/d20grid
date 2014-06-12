@@ -1,0 +1,124 @@
+<html><head><title>Test Grid Editor</title>
+<style type="text/css">
+td {min-width: 32px; height: 32px; background-repeat: no-repeat;}
+#content td {background-position: 0px 0px;}
+</style></head><body>
+<h1>Sparxy's Test Grid Editor</h1>
+<table border="1"><tr><td><h2>Palette</h2></td><td id="current" style="background-size:32px 32px;"></td></tr></table>
+</table><table border="1" style="border-collapse: collapse" onmousedown="pick(event)">
+<tr>
+<td style="background-size:32px 32px; background-image:url('palette_ros/solid_fill.png')" title="solid_fill"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/vertical_door.png')" title="vertical_door"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/horizontal_door.png')" title="horizontal_door"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/trapdoor.png')" title="trapdoor"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/open_pit.png')" title="open_pit"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/stairs_vertical_up.png')" title="stairs_vertical_up"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/stairs_vertical_down.png')" title="stairs_vertical_down"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/stairs_horizontal_up.png')" title="stairs_horizontal_up"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/stairs_horizontal_down.png')" title="stairs_horizontal_down"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/water.png')" title="water"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/statue.png')" title="statue"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/boulder.png')" title="boulder"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/tree.png')" title="tree"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/grass.png')" title="grass"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/gravel.png')" title="gravel"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/sand.png')" title="sand"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/gravestone.png')" title="gravestone"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/stables.png')" title="stables"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/blacksmithsign.png')" title="blacksmithsign"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/tavernsign.png')" title="tavernsign"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/regionscale-castle.png')" title="regionscale-castle"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/regionscale-forests.png')" title="regionscale-forests"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/regionscale-mountains.png')" title="regionscale-mountains"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/regionscale-mountainscave.png')" title="regionscale-mountainscave"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/regionscale-ruins.png')" title="regionscale-ruins"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/regionscale-tower.png')" title="regionscale-tower"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/regionscale-village.png')" title="regionscale-village"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/palisade_horizontal.png')" title="palisade_horizontal"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/palisade_vertical.png')" title="palisade_vertical"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/palisade_corner1.png')" title="palisade_corner1"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/palisade_corner2.png')" title="palisade_corner2"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/palisade_corner3.png')" title="palisade_corner3"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/palisade_corner4.png')" title="palisade_corner4"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/stump.png')" title="stump"></td>
+<td style="background-size:32px 32px; cursor: default; font-size:120%;">Empty</td>
+</tr>
+<tr>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thinwall_top.png')" title="thinwall_top"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thinwall_left.png')" title="thinwall_left"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thinwall_bottom.png')" title="thinwall_bottom"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thinwall_right.png')" title="thinwall_right"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thinwall_topleft.png')" title="thinwall_topleft"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thinwall_topright.png')" title="thinwall_topright"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thinwall_bottomleft.png')" title="thinwall_bottomleft"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thinwall_bottomright.png')" title="thinwall_bottomright"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thinwall_bottom_door.png')" title="thinwall_bottom_door"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thinwall_top_door.png')" title="thinwall_top_door"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thinwall_left_door.png')" title="thinwall_left_door"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thinwall_right_door.png')" title="thinwall_right_door"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thinwall_left_diagonal.png')" title="thinwall_left_diagonal"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thinwall_right_diagonal.png')" title="thinwall_right_diagonal"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/hallway.png')" title="hallway"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/strawbed.png')" title="strawbed"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/line_horizontal.png')" title="line_horizontal"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/line_vertical.png')" title="line_vertical"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/line_lower_left_bend.png')" title="line_lower_left_bend"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/line_lower_right_bend.png')" title="line_lower_right_bend"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/line_upper_left_bend.png')" title="line_upper_left_bend"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/line_upper_right_bend.png')" title="line_upper_right_bend"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thickline_horizontal.png')" title="thickline_horizontal"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thickline_vertical.png')" title="thickline_vertical"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thickline_lower_left_bend.png')" title="thickline_lower_left_bend"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thickline_lower_right_bend.png')" title="thickline_lower_right_bend"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thickline_upper_left_bend.png')" title="thickline_upper_left_bend"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thickline_upper_right_bend.png')" title="thickline_upper_right_bend"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thickline_lower_junction.png')" title="thickline_lower_junction"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thickline_upper_junction.png')" title="thickline_upper_junction"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thickline_right_junction.png')" title="thickline_right_junction"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thickline_left_junction.png')" title="thickline_left_junction"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/thickline_intersection.png')" title="thickline_intersection"></td>
+</tr>
+<tr>
+<td style="background-size:32px 32px; background-image:url('palette_ros/sewerpipe_horizontal.png')" title="sewerpipe_horizontal"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/sewerpipe_intersection.png')" title="sewerpipe_intersection"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/sewerpipe_left_junction.png')" title="sewerpipe_left_junction"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/sewerpipe_lower_junction.png')" title="sewerpipe_lower_junction"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/sewerpipe_lower_left_bend.png')" title="sewerpipe_lower_left_bend"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/sewerpipe_lower_right_bend.png')" title="sewerpipe_lower_right_bend"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/sewerpipe_right_junction.png')" title="sewerpipe_right_junction"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/sewerpipe_upper_junction.png')" title="sewerpipe_upper_junction"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/sewerpipe_upper_left_bend.png')" title="sewerpipe_upper_left_bend"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/sewerpipe_upper_right_bend.png')" title="sewerpipe_upper_right_bend"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/sewerpipe_vertical.png')" title="sewerpipe_vertical"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/murkywater.png')" title="murkywater"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/sewerledge_bottom.png')" title="sewerledge_bottom"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/sewerledge_left.png')" title="sewerledge_left"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/sewerledge_right.png')" title="sewerledge_right"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/sewerledge_top.png')" title="sewerledge_top"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/wood.png')" title="wood"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/swamp.png')" title="swamp"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/cobblestone.png')" title="cobblestone"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/compress.png')" title="compress"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/gravel_compress.png')" title="gravel_compress"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/lava.png')" title="lava"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/snow.png')" title="snow"></td>
+<!-- banner with strange device goes here, I think -->
+<td style="background-size:32px 32px; background-image:url('palette_ros/ice.png')" title="ice"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/grassy_shrub.png')" title="grassy_shrub"></td>
+<td style="background-size:32px 32px; background-image:url('palette_ros/snowy_bush.png')" title="snowy_bush"></td>
+</tr>
+</table>
+<br/><br/>
+<p><a href="javascript:addcol_l()">Add column left</a> - <a href="javascript:addcol_r()">Add column right</a> - <a href="javascript:addrow_a()">Add row above</a> - <a href="javascript:addrow_b()">Add row below</a></p>
+<p><a href="javascript:remcol_l()">Remove column left</a> - <a href="javascript:remcol_r()">Remove column right</a> - <a href="javascript:remrow_a()">Remove row top</a> - <a href="javascript:remrow_b()">Remove row bottom</a></p>
+<br/>
+<form id="saveForm" action="#" onsubmit="saveGrid(event)">
+Filename: <input type="text" id="fname" value=""/>&nbsp;&nbsp;&nbsp;<input type="submit" value="Save"/>
+</form>
+<br/><br/>
+<canvas id="mainGrid" name="mainGrid" style="border:0">
+</canvas>
+<canvas id="hiddenGrid" style="border:0" hidden="true">
+</canvas>
+<script src="gridedit.js"></script>
+</body></html>
